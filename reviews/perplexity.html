@@ -4,54 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Perplexity AIを実際に使ったリアルレビュー。無料・Proプランの違い、ChatGPTとの比較、引用付き回答の正確さを徹底解説。">
+  <meta property="og:title" content="Perplexity AIレビュー | AI Tools JP">
+  <meta property="og:image" content="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fbf7803d-6de2-4813-8579-0299a97b01af.png">
   <title>Perplexity AIレビュー｜引用付きで情報が正確なAI検索ツール | AI Tools JP</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
   <style>
-    .review-hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 20px; text-align: center; }
-    .review-hero h1 { font-size: 1.8rem; margin-bottom: 12px; }
-    .review-hero p { opacity: 0.85; font-size: 1rem; }
-    .article { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    .article h2 { font-size: 1.4rem; color: #1a1a2e; border-left: 4px solid #4f8ef7; padding-left: 12px; margin: 40px 0 16px; }
-    .article p { margin-bottom: 16px; line-height: 1.8; }
-    .rating { display: flex; gap: 8px; align-items: center; font-size: 1.5rem; margin: 20px 0; }
-    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    .review-hero { position: relative; }
+    .review-hero img { width: 100%; max-height: 360px; object-fit: cover; border-radius: 0 0 16px 16px; }
+    .review-hero-text { padding: 40px 0 0; }
+    .article { max-width: 800px; margin: 0 auto; padding: 0 20px 80px; }
+    .article h2 { font-size: 1.3rem; color: #1a1a2e; border-left: 4px solid #4f8ef7; padding-left: 12px; margin: 40px 0 16px; }
+    .article p { margin-bottom: 16px; line-height: 1.85; }
+    .rating { display: flex; gap: 8px; align-items: center; font-size: 1.4rem; margin: 16px 0 32px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0 32px; }
     table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-    th { background: #1a1a2e; color: white; padding: 12px; text-align: left; }
-    td { padding: 12px; border-bottom: 1px solid #eee; }
+    th { background: #1a1a2e; color: white; padding: 12px 16px; text-align: left; }
+    td { padding: 12px 16px; border-bottom: 1px solid #eee; }
     tr:hover td { background: #f5f8ff; }
-    .voice { background: #f0f5ff; border-left: 4px solid #4f8ef7; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; font-style: italic; }
-    .cta { background: linear-gradient(135deg, #4f8ef7, #1a6ef7); color: white; text-align: center; padding: 40px 20px; border-radius: 12px; margin: 40px 0; }
-    .cta h2 { color: white; border: none; padding: 0; }
-    .cta p { margin-bottom: 20px; }
-    .btn { display: inline-block; background: white; color: #1a6ef7; font-weight: bold; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-size: 1rem; transition: transform 0.2s; }
-    .btn:hover { transform: scale(1.05); }
-    .badge { display: inline-block; background: #e8f0fe; color: #1a6ef7; font-size: 0.8rem; padding: 4px 10px; border-radius: 20px; margin: 4px; }
-    nav.breadcrumb { font-size: 0.85rem; color: #888; padding: 16px 20px; max-width: 800px; margin: 0 auto; }
+    .voice { background: #f0f5ff; border-left: 4px solid #4f8ef7; padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 24px 0; font-style: italic; color: #444; }
+    .badge { display: inline-block; background: #e8f0fe; color: #1a6ef7; font-size: 0.82rem; padding: 5px 12px; border-radius: 20px; margin: 4px; }
+    .cta-box { background: linear-gradient(135deg, #4f8ef7, #1a6ef7); color: white; text-align: center; padding: 48px 24px; border-radius: 16px; margin: 48px 0; }
+    .cta-box h2 { color: white; border: none; padding: 0; font-size: 1.4rem; margin-bottom: 12px; }
+    .cta-box p { margin-bottom: 24px; opacity: 0.9; }
+    .cta-note { font-size: 0.78rem; opacity: 0.75; margin-top: 12px; }
+    nav.breadcrumb { font-size: 0.85rem; color: #888; padding: 16px 0; }
     nav.breadcrumb a { color: #4f8ef7; text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <div class="review-hero">
-    <h1>🔍 Perplexity AI レビュー</h1>
-    <p>引用付きで情報が正確——実際に使ってわかったAI検索ツールの実力</p>
-  </div>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4a819f2b-fae6-41fd-834b-4387a6932921.png" alt="AI Tools JP" class="site-logo">
+        <div>
+          <a href="/ai-tools-jp/" class="site-title">AI Tools JP</a>
+          <p class="tagline">海外AIツール・SaaSを日本語でわかりやすく解説</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <nav class="breadcrumb">
-    <a href="../index.html">AI Tools JP</a> &rsaquo; Perplexityレビュー
+  <nav class="global-nav">
+    <ul>
+      <li><a href="/ai-tools-jp/">🏠 ホーム</a></li>
+      <li><a href="/ai-tools-jp/reviews/">📝 レビュー一覧</a></li>
+      <li><a href="/ai-tools-jp/#categories">📊 カテゴリ</a></li>
+    </ul>
   </nav>
 
   <article class="article">
 
-    <p>ChatGPTをはじめ多くのAIツールが登場する中、<strong>「情報の正確さ」で一歩抜きん出ているのがPerplexity AI</strong>です。実際に日常的に使っている筆者が、リアルな体験をもとにレビューします。</p>
+    <nav class="breadcrumb">
+      <a href="/ai-tools-jp/">ホーム</a> &rsaquo; <a href="/ai-tools-jp/reviews/">レビュー一覧</a> &rsaquo; Perplexity AI
+    </nav>
 
-    <div class="rating">総合評価：⭐⭐⭐⭐⭐ <span style="font-size:1rem; color:#555;">（5/5）</span></div>
+    <img
+      src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fbf7803d-6de2-4813-8579-0299a97b01af.png"
+      alt="Perplexity AIレビュー"
+      style="width:100%; max-height:360px; object-fit:cover; border-radius:12px; margin-bottom:24px;"
+    >
+
+    <span class="tag">チャット・AI検索</span>
+    <h1 style="font-size:1.7rem; color:#1a1a2e; margin: 12px 0 8px; line-height:1.4;">Perplexity AI レビュー｜引用付きで情報が正確なAI検索ツール</h1>
+    <p style="color:#888; font-size:0.85rem;">2026年5月 更新</p>
+
+    <div class="rating">総合評価：⭐⭐⭐⭐⭐ <span style="font-size:0.95rem; color:#555;">（5/5）</span></div>
+
+    <p>ChatGPTをはじめ多くのAIツールが登場する中、<strong>「情報の正確さ」で一步抜きん出ているのがPerplexity AI</strong>です。実際に日常的に使っている筆者が、リアルな体験をもとにレビューします。</p>
 
     <h2>Perplexity AIとは？</h2>
-    <p>Perplexity AIは、質問に対してウェブ上の最新情報をリアルタイムで検索し、<strong>引用元リンク付きで回答するAI検索エンジン</strong>です。2022年にリリースされ、2026年現在は月間数億ユーザーが利用するグローバルサービスに成長しています。</p>
-    <p>通常のAIチャットと最大の違いは、「どこから取ってきた情報か」が明示される点。情報の裏付けが取れるため、ビジネス調査やリサーチ用途に非常に優れています。</p>
+    <p>Perplexity AIは、質問に対してウェブ上の最新情報をリアルタイムで検索し、<strong>引用元リンク付きで回答するAI検索エンジン</strong>です。通常のAIチャットと最大の違いは、「どこから取ってきた情報か」が常に明示される点。情報の裏付けが取れるため、ビジネス調査やリサーチ用途に非常に優れています。</p>
 
-    <h2>実際に使ってみて良かった点</h2>
+    <h2>実際に使って良かった点</h2>
     <div class="voice">
       「引用付きで情報が正確なところが好き。ChatGPTだと出典がわからないことが多いけど、Perplexityは根拠が見えるから安心して使える。」
     </div>
@@ -91,18 +116,18 @@
       <span class="badge">✅ 副業・フリーランスで作業効率を上げたい人</span>
     </p>
 
-    <div class="cta">
+    <div class="cta-box">
       <h2>🚀 まずは無料で試してみる</h2>
       <p>無料プランから始められます。クレジットカード不要。</p>
-      <a href="https://perplexity.ai" class="btn" target="_blank" rel="noopener">Perplexity AIを無料で使う →</a>
-      <p style="margin-top:12px; font-size:0.8rem; opacity:0.8;">※本リンクはアフィリエイトリンクです</p>
+      <a href="https://perplexity.ai" class="btn-primary" target="_blank" rel="noopener">無料でPerplexity AIを始める →</a>
+      <p class="cta-note">※本リンクはアフィリエイトリンクです</p>
     </div>
 
   </article>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 AI Tools JP</p>
+      <p>&copy; 2026 AI Tools JP &nbsp;|&nbsp; <a href="https://x.com/aitoolsjp" target="_blank">X (Twitter)</a></p>
     </div>
   </footer>
 
