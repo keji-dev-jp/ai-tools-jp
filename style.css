@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #1a1a2e;
+}
+
+.categories h2,
+.latest h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+  border-left: 4px solid #4f8ef7;
+  padding-left: 12px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.latest p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+footer {
+  background: #1a1a2e;
+  color: #aaa;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
