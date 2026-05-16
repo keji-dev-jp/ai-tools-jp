@@ -68,12 +68,18 @@ nav.global-nav ul {
 }
 
 nav.global-nav ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   color: rgba(255,255,255,0.8);
   text-decoration: none;
   padding: 12px 16px;
   font-size: 0.9rem;
   transition: color 0.2s, background 0.2s;
+}
+
+nav.global-nav ul li a i {
+  font-size: 0.9rem;
 }
 
 nav.global-nav ul li a:hover {

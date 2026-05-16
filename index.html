@@ -9,18 +9,20 @@
   <meta property="og:type" content="website">
   <title>AI Tools JP | 海外AIツール日本語レビュー</title>
   <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
   <style>
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 16px;
     }
     .category-card {
       background: white;
       border-radius: 12px;
-      padding: 24px 16px;
+      padding: 28px 16px 22px;
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: bold;
       color: #1a1a2e;
       text-decoration: none;
@@ -28,19 +30,25 @@
       transition: transform 0.2s, box-shadow 0.2s;
       display: block;
     }
+    .category-card i {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #4f8ef7;
+    }
     .category-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
       color: #4f8ef7;
     }
     .category-card.coming-soon {
-      opacity: 0.5;
+      opacity: 0.45;
       cursor: default;
       pointer-events: none;
     }
-    .category-card span {
+    .category-card .coming-label {
       display: block;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #aaa;
       font-weight: normal;
       margin-top: 4px;
@@ -102,9 +110,9 @@
 
   <nav class="global-nav">
     <ul>
-      <li><a href="/ai-tools-jp/">🏠 ホーム</a></li>
-      <li><a href="/ai-tools-jp/reviews/">📝 レビュー一覧</a></li>
-      <li><a href="#categories">📊 カテゴリ</a></li>
+      <li><a href="/ai-tools-jp/"><i class="fa-solid fa-house"></i> ホーム</a></li>
+      <li><a href="/ai-tools-jp/reviews/"><i class="fa-solid fa-pen-to-square"></i> レビュー一覧</a></li>
+      <li><a href="#categories"><i class="fa-solid fa-table-cells-large"></i> カテゴリ</a></li>
     </ul>
   </nav>
 
@@ -121,24 +129,30 @@
       <h2 class="section-title">カテゴリから探す</h2>
       <div class="category-grid">
         <a href="/ai-tools-jp/reviews/canva.html" class="category-card">
-          🎨 デザイン・画像生成
+          <i class="fa-solid fa-palette"></i>
+          デザイン・画像生成
         </a>
         <a href="/ai-tools-jp/reviews/deepl.html" class="category-card">
-          ✍️ 文章・ライティング
+          <i class="fa-solid fa-pen-nib"></i>
+          文章・ライティング
         </a>
         <a href="/ai-tools-jp/reviews/notion.html" class="category-card">
-          📊 業務効率化・自動化
+          <i class="fa-solid fa-chart-bar"></i>
+          業務効率化・自動化
         </a>
         <a href="/ai-tools-jp/reviews/perplexity.html" class="category-card">
-          💬 チャット・AI検索
+          <i class="fa-solid fa-comments"></i>
+          チャット・AI検索
         </a>
         <div class="category-card coming-soon">
-          🎬 動画・音声生成
-          <span>準備中</span>
+          <i class="fa-solid fa-film"></i>
+          動画・音声生成
+          <span class="coming-label">準備中</span>
         </div>
         <div class="category-card coming-soon">
-          💻 コーディング支援
-          <span>準備中</span>
+          <i class="fa-solid fa-code"></i>
+          コーディング支援
+          <span class="coming-label">準備中</span>
         </div>
       </div>
     </section>
@@ -146,52 +160,46 @@
     <section style="margin-top: 60px;">
       <h2 class="section-title">最新レビュー</h2>
       <div class="review-grid">
-
         <a href="reviews/perplexity.html" class="review-card">
           <img src="assets/images/perplexity.jpg" alt="Perplexity AI">
           <div class="review-card-body">
             <span class="tag">チャット・AI検索</span>
-            <h3>🔍 Perplexity AI｜引用付きで情報が正確なAI検索ツール</h3>
+            <h3>Perplexity AI｜引用付きで情報が正確なAI検索ツール</h3>
             <p>最新情報をリアルタイム検索。出典が常に表示されるから安心。</p>
           </div>
         </a>
-
         <a href="reviews/canva.html" class="review-card">
           <img src="assets/images/reviews/canva.jpg" alt="Canva">
           <div class="review-card-body">
             <span class="tag">デザイン・画像生成</span>
-            <h3>🎨 Canva｜デザイン初心者でもプロ品質が作れるツール</h3>
+            <h3>Canva｜デザイン初心者でもプロ品質が作れるツール</h3>
             <p>テンプレートを選ぶだけでSNS・LP・バナーが完成。</p>
           </div>
         </a>
-
         <a href="reviews/chatgpt.html" class="review-card">
           <img src="assets/images/reviews/chatgpt.jpg" alt="ChatGPT">
           <div class="review-card-body">
             <span class="tag">チャット・AI検索</span>
-            <h3>🤖 ChatGPT｜世界最大のAIチャットツール徹底解説</h3>
+            <h3>ChatGPT｜世界最大のAIチャットツール徹底解説</h3>
             <p>文章生成・翻訳・コード・アイデア出しまで何でもこなす万能AI。</p>
           </div>
         </a>
-
         <a href="reviews/notion.html" class="review-card">
           <img src="assets/images/reviews/notion.jpg" alt="Notion">
           <div class="review-card-body">
             <span class="tag">業務効率化・自動化</span>
-            <h3>📝 Notion｜メモ・タスク・DBを一元管理するオールインワンツール</h3>
+            <h3>Notion｜メモ・タスク・DBを一元管理するオールインワンツール</h3>
             <p>バラバラだった情報をひとつにまとめて業務効率アップ。</p>
           </div>
         </a>
-
         <a href="reviews/deepl.html" class="review-card">
           <img src="assets/images/reviews/deepl.jpg" alt="DeepL">
           <div class="review-card-body">
             <span class="tag">文章・ライティング</span>
-            <h3>🌐 DeepL｜Google翻訳を超えた精度の高い翻訳AIツール</h3>
+            <h3>DeepL｜Google翻訳を超えた精度の高い翻訳AIツール</h3>
             <p>文脈を理解した自然な翻訳。英語資料の読み込みが劇的に速くなる。</p>
           </div>
         </a>
-
       </div>
     </section>
 
