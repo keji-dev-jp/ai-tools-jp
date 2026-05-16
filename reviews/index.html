@@ -6,6 +6,48 @@
   <meta name="description" content="海外AIツール・SaaSの日本語レビュー一覧。Perplexity・Canva・ChatGPT・Notion・DeepLなどを実際に使った正直レビュー。">
   <title>レビュー一覧 | AI Tools JP</title>
   <link rel="stylesheet" href="../assets/css/common.css">
+  <style>
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 8px;
+    }
+    .review-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+    }
+    .review-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .review-card-body {
+      padding: 18px 20px 22px;
+    }
+    .review-card-body h3 {
+      font-size: 1rem;
+      color: #1a1a2e;
+      margin: 8px 0 6px;
+      line-height: 1.5;
+    }
+    .review-card-body p {
+      font-size: 0.85rem;
+      color: #777;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -29,42 +71,53 @@
   <main class="container">
     <h1 class="section-title">レビュー一覧</h1>
     <p style="margin-bottom:32px; color:#555;">実際に使って感じたリアルな評価をお届けします。</p>
-    <div class="card-grid">
-      <a href="/ai-tools-jp/reviews/perplexity.html" class="article-card">
-        <div class="article-card-body">
+    <div class="review-grid">
+
+      <a href="/ai-tools-jp/reviews/perplexity.html" class="review-card">
+        <img src="/ai-tools-jp/assets/images/perplexity.jpg" alt="Perplexity AI">
+        <div class="review-card-body">
           <span class="tag">チャット・AI検索</span>
           <h3>🔍 Perplexity AI｜引用付きで情報が正確なAI検索ツール</h3>
           <p>最新情報をリアルタイム検索。出典が常に表示されるから安心。</p>
         </div>
       </a>
-      <a href="/ai-tools-jp/reviews/canva.html" class="article-card">
-        <div class="article-card-body">
+
+      <a href="/ai-tools-jp/reviews/canva.html" class="review-card">
+        <img src="/ai-tools-jp/assets/images/reviews/canva.jpg" alt="Canva">
+        <div class="review-card-body">
           <span class="tag">デザイン・画像生成</span>
           <h3>🎨 Canva｜デザイン初心者でもプロ品質が作れるツール</h3>
           <p>テンプレートを選ぶだけでSNS・LP・バナーが完成。</p>
         </div>
       </a>
-      <a href="/ai-tools-jp/reviews/chatgpt.html" class="article-card">
-        <div class="article-card-body">
+
+      <a href="/ai-tools-jp/reviews/chatgpt.html" class="review-card">
+        <img src="/ai-tools-jp/assets/images/reviews/chatgpt.jpg" alt="ChatGPT">
+        <div class="review-card-body">
           <span class="tag">チャット・AI検索</span>
           <h3>🤖 ChatGPT｜世界最大のAIチャットツール徹底解説</h3>
           <p>文章生成・翻訳・コード・アイデア出しまで何でもこなす万能AI。</p>
         </div>
       </a>
-      <a href="/ai-tools-jp/reviews/notion.html" class="article-card">
-        <div class="article-card-body">
+
+      <a href="/ai-tools-jp/reviews/notion.html" class="review-card">
+        <img src="/ai-tools-jp/assets/images/reviews/notion.jpg" alt="Notion">
+        <div class="review-card-body">
           <span class="tag">業務効率化・自動化</span>
           <h3>📝 Notion｜メモ・タスク・DBを一元管理するオールインワンツール</h3>
           <p>バラバラだった情報をひとつにまとめて業務効率アップ。</p>
         </div>
       </a>
-      <a href="/ai-tools-jp/reviews/deepl.html" class="article-card">
-        <div class="article-card-body">
+
+      <a href="/ai-tools-jp/reviews/deepl.html" class="review-card">
+        <img src="/ai-tools-jp/assets/images/reviews/deepl.jpg" alt="DeepL">
+        <div class="review-card-body">
           <span class="tag">文章・ライティング</span>
           <h3>🌐 DeepL｜Google翻訳を超えた精度の高い翻訳AIツール</h3>
           <p>文脈を理解した自然な翻訳。英語資料の読み込みが劇的に速くなる。</p>
         </div>
       </a>
+
     </div>
   </main>
   <footer>
