@@ -4,25 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="仕事・副業に使えるAIツール・Webサービスの日本語レビュー一覧。Perplexity・Canva・ChatGPT・クラウドワークスなどを実際に使った正直レビュー。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AIツール・副業レビュー一覧 | AI Tools JP">
+  <meta property="og:description" content="仕事・副業に使えるAIツール・Webサービスの日本語レビュー一覧。">
+  <meta property="og:url" content="https://keji-dev-jp.github.io/ai-tools-jp/reviews/">
+  <meta property="og:image" content="https://keji-dev-jp.github.io/ai-tools-jp/assets/images/hero_banner.png">
+  <meta property="og:site_name" content="AI Tools JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://keji-dev-jp.github.io/ai-tools-jp/reviews/">
   <title>AIツール・副業レビュー一覧 | AI Tools JP</title>
   <link rel="stylesheet" href="../assets/css/common.css">
   <script src="../assets/js/common.js"></script>
+  <style>
+    /* ページング防止: カード画像エリアを固定高さに統一 */
+    .review-card .card-thumb {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      display: block;
+      background: #e8edf2;
+    }
+  </style>
 </head>
 <body>
   <header id="site-header"></header>
   <nav id="site-nav" class="global-nav"></nav>
   <main class="container">
+    <nav class="breadcrumb"><a href="/ai-tools-jp/">ホーム</a> &rsaquo; AIツール・副業レビュー一覧</nav>
     <h1 class="section-title">AIツール・副業レビュー一覧</h1>
     <p style="margin-bottom:32px;color:#555;">実際に使って感じたリアルな評価をお届けします。</p>
 
     <h2 style="font-size:1.1rem;color:#1a1a2e;margin:0 0 16px;padding-left:12px;border-left:4px solid #0082cc;">副業・フリーランス</h2>
     <div class="review-grid" style="margin-bottom:48px;">
       <a href="/ai-tools-jp/reviews/crowdworks-worker.html" class="review-card">
-        <div style="background:linear-gradient(135deg,#0082cc,#00a0e9);height:160px;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;"><span style="color:white;font-size:2.2rem;font-weight:bold;">CW</span></div>
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/cw-worker.png" alt="クラウドワークス ワーカー">
         <div class="review-card-body"><span class="tag">副業・フリーランス</span><h3>クラウドワークスで副業を始める方法｜登録から仕事の取り方まで</h3><p>会員数443万人の国内最大クラウドソーシング。今日から副業スタートできる。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/crowdworks-client.html" class="review-card">
-        <div style="background:linear-gradient(135deg,#0082cc,#00a0e9);height:160px;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;"><span style="color:white;font-size:2.2rem;font-weight:bold;">CW</span></div>
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/cw-client.png" alt="クラウドワークス クライアント">
         <div class="review-card-body"><span class="tag">副業・フリーランス</span><h3>クラウドワークスで外注する方法｜発注者登録から受発注まで完全ガイド</h3><p>発注手数料無料。デザイン・LP・ライティングを安く外注できる。</p></div>
       </a>
     </div>
@@ -30,28 +50,28 @@
     <h2 style="font-size:1.1rem;color:#1a1a2e;margin:0 0 16px;padding-left:12px;border-left:4px solid #4f8ef7;">AIツール・SaaS</h2>
     <div class="review-grid">
       <a href="/ai-tools-jp/reviews/perplexity.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/perplexity.jpg" alt="Perplexity AI">
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/perplexity.jpg" alt="Perplexity AI">
         <div class="review-card-body"><span class="tag">チャット・AI検索</span><h3>Perplexity AI｜引用付きで情報が正確なAI検索ツール</h3><p>最新情報をリアルタイム検索。出典が常に表示されるから安心。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/canva.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/reviews/canva.jpg" alt="Canva">
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/canva.jpg" alt="Canva">
         <div class="review-card-body"><span class="tag">デザイン・画像生成</span><h3>Canva｜デザイン初心者でもプロ品質が作れるツール</h3><p>テンプレートを選ぶだけでSNS・LP・バナーが完成。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/chatgpt.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/reviews/chatgpt.jpg" alt="ChatGPT">
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/chatgpt.jpg" alt="ChatGPT">
         <div class="review-card-body"><span class="tag">チャット・AI検索</span><h3>ChatGPT｜世界最大のAIチャットツール徹底解説</h3><p>文章生成・翻訳・コード・アイデア出しまで何でもこなす万能AI。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/notion.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/reviews/notion.jpg" alt="Notion">
-        <div class="review-card-body"><span class="tag">業務効率化・自動化</span><h3>Notion｜メモ・タスク・DBを一元管理するオールインワンツール</h3><p>バラバラだった情報をひとつにまとめて業務効率アップ。</p></div>
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/notion.jpg" alt="Notion">
+        <div class="review-card-body"><span class="tag">業務効率化・自動化</span><h3>Notion｜メモ・タスク・DBを一元管理できるツール</h3><p>バラバラだった情報をひとつにまとめて業務効率アップ。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/deepl.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/reviews/deepl.jpg" alt="DeepL">
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/deepl.jpg" alt="DeepL">
         <div class="review-card-body"><span class="tag">文章・ライティング</span><h3>DeepL｜Google翻訳を超えた精度の高い翻訳AIツール</h3><p>文脈を理解した自然な翻訳。英語資料の読み込みが劇的に速くなる。</p></div>
       </a>
       <a href="/ai-tools-jp/reviews/perplexity-vs-chatgpt.html" class="review-card">
-        <img src="/ai-tools-jp/assets/images/perplexity.jpg" alt="Perplexity vs ChatGPT">
-        <div class="review-card-body"><span class="tag">AIツール比較</span><h3>Perplexity vs ChatGPT｜どちらを選ぶべき？用途別に解説</h3><p>調べるならPerplexity、書くならChatGPT。使い分けを解説。</p></div>
+        <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/perplexity-vs-chatgpt.jpg" alt="Perplexity vs ChatGPT">
+        <div class="review-card-body"><span class="tag">AIツール比較</span><h3>Perplexity vs ChatGPT｜どちらを選ぶべき？用途別に解説</h3><p>調べるなPerplexity、書くなChatGPT。使い分けを解説。</p></div>
       </a>
     </div>
   </main>
