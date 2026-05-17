@@ -45,7 +45,7 @@ function injectLayout(){
           '<img src="'+imgPath+'" alt="AI Tools JP" class="site-logo">'+
           '<div>'+
             '<a href="/ai-tools-jp/" class="site-title">AI Tools JP</a>'+
-            '<p class="tagline">海外AIツール・SaaSを日本語でわかりやすく解説</p>'+
+            '<p class="tagline">仕事・副業に使えるツール日本語レビュー</p>'+
           '</div>'+
           '<button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く"><i class="fa-solid fa-bars"></i></button>'+
         '</div>'+
@@ -56,13 +56,16 @@ function injectLayout(){
   if(nav){
     var isHome=(current==='/ai-tools-jp/'||current==='/ai-tools-jp/index.html');
     var isReview=current.includes('/reviews/');
+    var isCW=current.includes('crowdworks');
     nav.innerHTML=
       '<div class="container">'+
         '<ul id="nav-menu">'+
           '<li><a href="/ai-tools-jp/"'+(isHome?' class="active"':'')+'>'+
             '<i class="fa-solid fa-house"></i> ホーム</a></li>'+
-          '<li><a href="/ai-tools-jp/reviews/"'+(isReview?' class="active"':'')+'>'+
-            '<i class="fa-solid fa-pen-to-square"></i> レビュー一覧</a></li>'+
+          '<li><a href="/ai-tools-jp/reviews/"'+(isReview&&!isCW?' class="active"':'')+'>'+
+            '<i class="fa-solid fa-robot"></i> AIツール</a></li>'+
+          '<li><a href="/ai-tools-jp/reviews/crowdworks-worker.html"'+(isCW?' class="active"':'')+'>'+
+            '<i class="fa-solid fa-briefcase"></i> 副業・フリーランス</a></li>'+
           '<li><a href="/ai-tools-jp/#categories">'+
             '<i class="fa-solid fa-table-cells-large"></i> カテゴリ</a></li>'+
         '</ul>'+
