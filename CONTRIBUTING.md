@@ -1,145 +1,111 @@
-# AI Tools JP — サイト運用ルール
+# AI Tools JP 運用ルール
 
-> 記事を新規作成・更新する際はこのドキュメントに従ってください。
+## ファイル構成
 
----
-
-## 1. カテゴリ・タグの統一ルール
-
-| カテゴリ | `<span class="tag">値</span>` | 対象ツール例 |
-|---|---|---|
-| チャット・AI検索 | `チャット・AI検索` | Perplexity・ChatGPT |
-| デザイン・画像生成 | `デザイン・画像生成` | Canva・Midjourney |
-| 文章・ライティング | `文章・ライティング` | DeepL・Jasper |
-| 業務効率化・自動化 | `業務効率化・自動化` | Notion・Zapier |
-| 副業・フリーランス | `副業・フリーランス` | クラウドワークス |
-| AIツール比較 | `AIツール比較` | vs系記事 |
-
-❗ 独自表記（「比較記事」等）は使わない。必ず上記のいずれかに属する。
-
----
-
-## 2. アイコンルール（Font Awesome）
-
-**原則：絵文字（エモジ）は使わない。Font Awesomeアイコンを必ず使う。**
-
-| 用途 | アイコン | クラス |
-|---|---|---|
-| ホームナビ | house | `fa-solid fa-house` |
-| AIツールナビ | robot | `fa-solid fa-robot` |
-| 副業ナビ | briefcase | `fa-solid fa-briefcase` |
-| カテゴリナビ | table-cells-large | `fa-solid fa-table-cells-large` |
-| Perplexity記事内 | magnifying-glass | `fa-solid fa-magnifying-glass` |
-| ChatGPT記事内 | robot | `fa-solid fa-robot` |
-| 副業記事内 | briefcase | `fa-solid fa-briefcase` |
-| ヒント・チップボックス | lightbulb | `fa-solid fa-lightbulb` |
-| ペン・ライティング | pen | `fa-solid fa-pen` |
-| スター・評価 | star | `fa-solid fa-star` |
-| フォルダ | folder-open | `fa-solid fa-folder-open` |
-| ユーザー | users | `fa-solid fa-users` |
-| 鍵・安全 | lock | `fa-solid fa-lock` |
-| 雷・スピード | bolt | `fa-solid fa-bolt` |
-| ステップ番号 | カウンター自動 | CSS `counter` 使用（絵文字不可） |
-| おすすめバッジ | ✅ | テキストのみ（変更不要） |
-| 警告バッジ | ⚠️ | テキストのみ（変更不要） |
-
-```html
-<!-- ✅ 正しい -->
-<i class="fa-solid fa-magnifying-glass" style="color:#4f8ef7;"></i> Perplexity AI
-
-<!-- ❌ 間違い -->
-🔍 Perplexity AI
+```
+ai-tools-jp/
+├── index.html              # トップページ
+├── reviews/
+│   ├── index.html          # レビュー一覧ページ
+│   └── {slug}.html         # 各レビュー記事
+├── assets/
+│   ├── css/common.css      # 全ページ共通スタイル
+│   ├── js/common.js        # 共通ヘッダー/フッター
+│   └── images/
+│       ├── hero_banner.png  # トップページヒーロー画像
+│       ├── logo.png         # サイトロゴ
+│       └── reviews/         # 各記事のサムネイル画像
+│           └── {slug}.jpg/.png
+└── CONTRIBUTING.md
 ```
 
 ---
 
-## 3. サムネイル画像ルール
+## 新規記事作成ルール
 
-- **記事1本につき1枚**専用サムネイルを用意する
-- 保存場所：`assets/images/reviews/<slug>.png`
-- サイズ：**1200×630px**（OGP推奨サイズ）
-- 内容ルール：
-  - 実在の人物写真・ロゴ・スクリーンショットは使用しない
-  - フラットデザイン・グラデーション背景 + テキストで構成する
-  - 記事タイトルと対応するカテゴリカラーを使用する
-- カテゴリ別カラー：
-  | カテゴリ | メインカラー |
-  |---|---|
-  | AIツール全般 | `#4f8ef7` (blue) |
-  | 副業・フリーランス | `#0082cc` (dark blue) |
-  | デザイン | `#e74c3c` (red) |
-  | ライティング | `#27ae60` (green) |
-  | 業務効率化 | `#8e44ad` (purple) |
+### 1. ファイル名・パス
 
----
+| 項目 | ルール |
+|---|---|
+| 記事HTML | `reviews/{slug}.html` |
+| サムネ画像 | `assets/images/reviews/{slug}.jpg` または `.png` |
+| slug形式 | 半角英数字・ハイフンのみ（例: `chatgpt`, `perplexity-vs-chatgpt`） |
 
-## 4. OGP・canonicalの必須タグ（全記事共通）
+### 2. サムネ画像ルール
+
+- **サイズ**: 1200×630px
+- **容量**: **1MB以内**に圧縮してからアップロード
+- **形式**: `.jpg`（写真系）または `.png`（イラスト・スクリーンショット系）
+- **内容**: 実サイトのスクリーンショットまたはAI生成画像（著作権・ロゴを含まないもの）
+- **格納先**: 必ず `assets/images/reviews/` に統一
+- カードの画像エリアは `class="card-thumb"` で高さ160px固定（ページゆれ防止）
+
+#### 推奨圧縮ツール
+- [Squoosh](https://squoosh.app/) — JPEG 80% 品質
+- [TinyPNG](https://tinypng.com/) — PNG最大圧縮
+
+### 3. HTML `<head>` 必須項目
 
 ```html
+<meta name="description" content="{120字以内}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="記事タイトル | AI Tools JP">
-<meta property="og:description" content="meta descriptionと同じ文">
-<meta property="og:url" content="https://keji-dev-jp.github.io/ai-tools-jp/reviews/SLUG.html">
-<meta property="og:image" content="https://keji-dev-jp.github.io/ai-tools-jp/assets/images/reviews/SLUG.png">
+<meta property="og:title" content="{title} | AI Tools JP">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="https://keji-dev-jp.github.io/ai-tools-jp/reviews/{slug}.html">
+<meta property="og:image" content="https://keji-dev-jp.github.io/ai-tools-jp/assets/images/reviews/{slug}.jpg">
 <meta property="og:site_name" content="AI Tools JP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="article:modified_time" content="YYYY-MM-DD">
-<link rel="canonical" href="https://keji-dev-jp.github.io/ai-tools-jp/reviews/SLUG.html">
+<meta name="article:modified_time" content="{YYYY-MM-DD}">
+<link rel="canonical" href="https://keji-dev-jp.github.io/ai-tools-jp/reviews/{slug}.html">
 ```
 
-❗ `SLUG` は記事のHTMLファイル名（拡張子なし）に合わせる。
-
----
-
-## 5. パンくずリンクの統一
+### 4. パンくず（必須）
 
 ```html
 <nav class="breadcrumb">
   <a href="/ai-tools-jp/">ホーム</a> &rsaquo;
   <a href="/ai-tools-jp/reviews/">AIツール・副業レビュー一覧</a> &rsaquo;
-  ページ名
+  {ToolName}
 </nav>
 ```
 
-❗「レビュー一覧」など他の表記は使わない。
+### 5. 共通コンポーネント
+
+```html
+<header id="site-header"></header>
+<nav id="site-nav" class="global-nav"></nav>
+<!-- 本文 -->
+<footer id="site-footer"></footer>
+```
+
+ヘッダー/ナビ/フッターは `common.js` が自動挿入。直接記述不要。
+
+### 6. レビュー一覧・トップへの追加
+
+新規記事を作成したら **両方** に追加する：
+
+**`reviews/index.html`** の該当カテゴリに追加：
+```html
+<a href="/ai-tools-jp/reviews/{slug}.html" class="review-card">
+  <img class="card-thumb" src="/ai-tools-jp/assets/images/reviews/{slug}.jpg" alt="{ToolName}">
+  <div class="review-card-body">
+    <span class="tag">{category}</span>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</a>
+```
+
+**`index.html`（トップ）** の「最新レビュー」セクションにも同様に追加。
 
 ---
 
-## 6. meta descriptionの書き方
+## 公開前チェックリスト
 
-- **必ず「仕事・副業に使えるツール」というコンセプトと結びつくキーワードを入れる**
-- 60字〜120字でまとめる
-- 「日本語で解説」「徹底解説」「実際に使った」のいずれかを入れる
-
-```
-例：「クラウドワークスで副業を始めたい人必見。仕事・副業に使えるツールとして登録方法・仕事の取り方・稼ぐコツを徹底解説。」
-```
-
----
-
-## 7. sitemap.xmlの更新ルール
-
-新しい記事を追加したら **必ず `sitemap.xml` に追記する**。
-
-```xml
-<url>
-  <loc>https://keji-dev-jp.github.io/ai-tools-jp/reviews/SLUG.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-```
-
----
-
-## 8. 新記事作成チェックリスト
-
-- [ ] `<span class="tag">値</span>` は上記カテゴリ表のいずれかに属する
-- [ ] アイコンは Font Awesome を使用（絵文字禁止）
-- [ ] サムネイル画像を `assets/images/reviews/<slug>.png` に配置済み（1200×630px）
-- [ ] OGP・canonicalタグが全て揃っている
-- [ ] パンくずのリンクテキストが `AIツール・副業レビュー一覧` になっている
-- [ ] `index.html`（トップ）の最新レビューセクションに追加した
-- [ ] `reviews/index.html` の該当セクションに追加した
-- [ ] `sitemap.xml` に追記した
-- [ ] `meta description` にコンセプトキーワードが入っている
-- [ ] `article:modified_time` に更新日を記載した
+- [ ] `reviews/{slug}.html` 作成済み
+- [ ] `<head>` OGP・canonical 全項目入り
+- [ ] パンくず記載済み
+- [ ] `assets/images/reviews/{slug}.jpg` を **1MB以内** で用意・アップロード済み
+- [ ] `reviews/index.html` にカード追加済み
+- [ ] `index.html`（トップ）の最新レビューにカード追加済み
+- [ ] PC・SP両方で表示確認済み
