@@ -27,14 +27,14 @@
 (function(){
   var depth=window.location.pathname.includes('/reviews/')?'../':'';
   var l=document.createElement('link');
-  l.rel='icon'; l.href=depth+'assets/images/logo.png'; l.type='image/png';
+  l.rel='icon'; l.href=depth+'assets/images/logo.jpg'; l.type='image/jpeg';
   document.head.appendChild(l);
 })();
 
 // Header / Nav / Footer
 function injectLayout(){
   var isReviews=window.location.pathname.includes('/reviews/');
-  var imgPath=isReviews?'../assets/images/logo.png':'assets/images/logo.png';
+  var imgPath=isReviews?'../assets/images/logo.jpg':'assets/images/logo.jpg';
   var current=window.location.pathname;
 
   var header=document.getElementById('site-header');
